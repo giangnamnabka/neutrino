@@ -1,4 +1,4 @@
-PKG := github.com/lightninglabs/neutrino
+PKG := github.com/giangnamnabka/neutrino
 
 LINT_PKG := github.com/golangci/golangci-lint/cmd/golangci-lint
 GOACC_PKG := github.com/ory/go-acc
