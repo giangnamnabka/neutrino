@@ -3,7 +3,7 @@ package query
 import (
 	"time"
 
-	"github.com/giangnamnabka/btcd/wire"
+	"github.com/btcsuite/btcd/wire"
 )
 
 const (

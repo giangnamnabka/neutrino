@@ -7,15 +7,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/giangnamnabka/btcd/blockchain"
-	"github.com/giangnamnabka/btcd/chaincfg/chainhash"
-	"github.com/giangnamnabka/btcd/wire"
-	"github.com/giangnamnabka/btcutil"
-	"github.com/giangnamnabka/btcutil/gcs"
-	"github.com/giangnamnabka/btcutil/gcs/builder"
-	"github.com/giangnamnabka/neutrino/cache"
-	"github.com/giangnamnabka/neutrino/filterdb"
-	"github.com/giangnamnabka/neutrino/pushtx"
+	"github.com/btcsuite/btcd/blockchain"
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/btcsuite/btcutil"
+	"github.com/btcsuite/btcutil/gcs"
+	"github.com/btcsuite/btcutil/gcs/builder"
+	"github.com/lightninglabs/neutrino/cache"
+	"github.com/lightninglabs/neutrino/filterdb"
+	"github.com/lightninglabs/neutrino/pushtx"
 )
 
 var (

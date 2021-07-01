@@ -12,22 +12,22 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/giangnamnabka/btcd/addrmgr"
-	"github.com/giangnamnabka/btcd/blockchain"
-	"github.com/giangnamnabka/btcd/chaincfg"
-	"github.com/giangnamnabka/btcd/chaincfg/chainhash"
-	"github.com/giangnamnabka/btcd/connmgr"
-	"github.com/giangnamnabka/btcd/peer"
-	"github.com/giangnamnabka/btcd/wire"
-	"github.com/giangnamnabka/btcutil"
-	"github.com/giangnamnabka/btcwallet/walletdb"
-	"github.com/giangnamnabka/neutrino/banman"
-	"github.com/giangnamnabka/neutrino/blockntfns"
-	"github.com/giangnamnabka/neutrino/cache/lru"
-	"github.com/giangnamnabka/neutrino/filterdb"
-	"github.com/giangnamnabka/neutrino/headerfs"
-	"github.com/giangnamnabka/neutrino/pushtx"
-	"github.com/giangnamnabka/neutrino/query"
+	"github.com/btcsuite/btcd/addrmgr"
+	"github.com/btcsuite/btcd/blockchain"
+	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcd/connmgr"
+	"github.com/btcsuite/btcd/peer"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/btcsuite/btcutil"
+	"github.com/btcsuite/btcwallet/walletdb"
+	"github.com/lightninglabs/neutrino/banman"
+	"github.com/lightninglabs/neutrino/blockntfns"
+	"github.com/lightninglabs/neutrino/cache/lru"
+	"github.com/lightninglabs/neutrino/filterdb"
+	"github.com/lightninglabs/neutrino/headerfs"
+	"github.com/lightninglabs/neutrino/pushtx"
+	"github.com/lightninglabs/neutrino/query"
 )
 
 // These are exported variables so they can be changed by users.
@@ -46,7 +46,7 @@ var (
 
 	// UserAgentVersion is the user agent version and is used to help
 	// identify ourselves to other bitcoin peers.
-	UserAgentVersion = "0.11.0-beta"
+	UserAgentVersion = "0.12.0-beta"
 
 	// Services describes the services that are supported by the server.
 	Services = wire.SFNodeWitness | wire.SFNodeCF

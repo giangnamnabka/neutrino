@@ -3,10 +3,10 @@ package neutrino
 import (
 	"fmt"
 
-	"github.com/giangnamnabka/btcd/txscript"
-	"github.com/giangnamnabka/btcutil"
-	"github.com/giangnamnabka/btcutil/gcs"
-	"github.com/giangnamnabka/btcutil/gcs/builder"
+	"github.com/btcsuite/btcd/txscript"
+	"github.com/btcsuite/btcutil"
+	"github.com/btcsuite/btcutil/gcs"
+	"github.com/btcsuite/btcutil/gcs/builder"
 )
 
 // VerifyBasicBlockFilter asserts that a given block filter was constructed
@@ -97,15 +97,15 @@ func VerifyBasicBlockFilter(filter *gcs.Filter, block *btcutil.Block) (int,
 			//
 			// TODO(guggero): Add all those edge cases to
 			// ComputePkScript?
-			// if len(in.Witness) == 0 {
-			// 	continue
-			// }
+			if len(in.Witness) == 0 {
+				continue
+			}
 
 			// The only input type that has both set is a nested
 			// P2PKH (P2SH-P2WKH). We can verify that one because
 			// the script hash has to be HASH160(OP_PUSH32 <PKH>).
 			script, err := txscript.ComputePkScript(
-				in.SignatureScript,
+				in.SignatureScript, in.Witness,
 			)
 
 			// Just skip any inputs that we can't derive the pk

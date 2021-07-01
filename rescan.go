@@ -10,17 +10,17 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/giangnamnabka/btcd/btcjson"
-	"github.com/giangnamnabka/btcd/chaincfg"
-	"github.com/giangnamnabka/btcd/chaincfg/chainhash"
-	"github.com/giangnamnabka/btcd/rpcclient"
-	"github.com/giangnamnabka/btcd/txscript"
-	"github.com/giangnamnabka/btcd/wire"
-	"github.com/giangnamnabka/btcutil"
-	"github.com/giangnamnabka/btcutil/gcs"
-	"github.com/giangnamnabka/btcutil/gcs/builder"
-	"github.com/giangnamnabka/neutrino/blockntfns"
-	"github.com/giangnamnabka/neutrino/headerfs"
+	"github.com/btcsuite/btcd/btcjson"
+	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcd/rpcclient"
+	"github.com/btcsuite/btcd/txscript"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/btcsuite/btcutil"
+	"github.com/btcsuite/btcutil/gcs"
+	"github.com/btcsuite/btcutil/gcs/builder"
+	"github.com/lightninglabs/neutrino/blockntfns"
+	"github.com/lightninglabs/neutrino/headerfs"
 )
 
 var (
@@ -1188,7 +1188,7 @@ func (ro *rescanOptions) spendsWatchedInput(tx *btcutil.Tx) bool {
 			// match on the output script being spent instead.
 			case input.OutPoint == zeroOutPoint:
 				pkScript, err := txscript.ComputePkScript(
-					in.SignatureScript,
+					in.SignatureScript, in.Witness,
 				)
 				if err != nil {
 					continue
