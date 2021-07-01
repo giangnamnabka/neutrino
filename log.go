@@ -1,15 +1,15 @@
 package neutrino
 
 import (
-	"github.com/btcsuite/btcd/addrmgr"
-	"github.com/btcsuite/btcd/blockchain"
-	"github.com/btcsuite/btcd/connmgr"
-	"github.com/btcsuite/btcd/peer"
-	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btclog"
-	"github.com/lightninglabs/neutrino/blockntfns"
-	"github.com/lightninglabs/neutrino/pushtx"
-	"github.com/lightninglabs/neutrino/query"
+	"github.com/giangnamnabka/btcd/addrmgr"
+	"github.com/giangnamnabka/btcd/blockchain"
+	"github.com/giangnamnabka/btcd/connmgr"
+	"github.com/giangnamnabka/btcd/peer"
+	"github.com/giangnamnabka/btcd/txscript"
+	"github.com/giangnamnabka/neutrino/blockntfns"
+	"github.com/giangnamnabka/neutrino/pushtx"
+	"github.com/giangnamnabka/neutrino/query"
 )
 
 // log is a logger that is initialized with no output filters.  This

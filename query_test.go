@@ -12,17 +12,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/blockchain"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/gcs"
-	"github.com/btcsuite/btcutil/gcs/builder"
-	"github.com/lightninglabs/neutrino/cache"
-	"github.com/lightninglabs/neutrino/cache/lru"
-	"github.com/lightninglabs/neutrino/filterdb"
-	"github.com/lightninglabs/neutrino/headerfs"
+	"github.com/giangnamnabka/btcd/blockchain"
+	"github.com/giangnamnabka/btcd/chaincfg"
+	"github.com/giangnamnabka/btcd/chaincfg/chainhash"
+	"github.com/giangnamnabka/btcd/wire"
+	"github.com/giangnamnabka/btcutil"
+	"github.com/giangnamnabka/btcutil/gcs"
+	"github.com/giangnamnabka/btcutil/gcs/builder"
+	"github.com/giangnamnabka/neutrino/cache"
+	"github.com/giangnamnabka/neutrino/cache/lru"
+	"github.com/giangnamnabka/neutrino/filterdb"
+	"github.com/giangnamnabka/neutrino/headerfs"
 )
 
 var (
@@ -42,7 +42,7 @@ var (
 // loadBlocks loads the blocks contained in the testdata directory and returns
 // a slice of them.
 //
-// NOTE: copied from btcsuite/btcd/database/ffldb/interface_test.go.
+// NOTE: copied from giangnamnabka/btcd/database/ffldb/interface_test.go.
 func loadBlocks(t *testing.T, dataFile string, network wire.BitcoinNet) (
 	[]*btcutil.Block, error) {
 	// Open the file that contains the blocks for reading.
